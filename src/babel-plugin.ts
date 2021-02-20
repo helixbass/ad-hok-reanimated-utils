@@ -3,11 +3,11 @@ import {Visitor, NodePath} from '@babel/traverse'
 
 const isAddAnimatedStyle = ({node}: NodePath<BabelTypes.CallExpression>) =>
   node.callee.type === 'Identifier' && node.callee.name === 'addAnimatedStyle'
-// const isAddAnimatedGestureHandler = ({
-//   node,
-// }: NodePath<BabelTypes.CallExpression>) =>
-//   node.callee.type === 'Identifier' &&
-//   node.callee.name === 'addAnimatedGestureHandler'
+const isAddAnimatedGestureHandler = ({
+  node,
+}: NodePath<BabelTypes.CallExpression>) =>
+  node.callee.type === 'Identifier' &&
+  node.callee.name === 'addAnimatedGestureHandler'
 const isAddDerivedValue = ({node}: NodePath<BabelTypes.CallExpression>) =>
   node.callee.type === 'Identifier' && node.callee.name === 'addDerivedValue'
 const isAddDerivedValues = ({node}: NodePath<BabelTypes.CallExpression>) =>
@@ -115,7 +115,7 @@ export default ({
           })
         })
       }
-      if (isAddWorkletHandlers(path)) {
+      if (isAddWorkletHandlers(path) || isAddAnimatedGestureHandler(path)) {
         const handlers = args[0]
         if (handlers.type !== 'ObjectExpression') return
         handlers.properties.forEach((handlerProperty, handlerPropertyIndex) => {
@@ -130,19 +130,6 @@ export default ({
           })
         })
       }
-      // if (isAddAnimatedGestureHandler(path)) {
-      //   path = path.parentPath
-      //   const handlers = path.node.arguments[0]
-      //   if (handlers.type !== 'ObjectExpression') return
-      //   handlers.properties.forEach((handlerProperty, handlerPropertyIndex) => {
-      //     transformFunction({
-      //       basePath: path,
-      //       basePathPrefix: `arguments.0.properties.${handlerPropertyIndex}.value`,
-      //       functionNode: handlerProperty.value,
-      //       t,
-      //     })
-      //   })
-      // }
     },
   },
 })
