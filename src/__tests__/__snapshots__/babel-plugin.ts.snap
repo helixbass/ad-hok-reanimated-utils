@@ -6,12 +6,24 @@ const Component = flowMax(
   addAnimatedStyle('style', ({opacity}) => () => ({
     opacity,
   })),
+  addAnimatedStyle('style', ({opacity}) => () => {
+    return {
+      opacity
+    }
+  }),
   () => null
 )
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const Component = flowMax(
+  addAnimatedStyle('style', ({opacity}) => () => {
+    'worklet'
+
+    return {
+      opacity,
+    }
+  }),
   addAnimatedStyle('style', ({opacity}) => () => {
     'worklet'
 
@@ -31,6 +43,11 @@ const Component = flowMax(
   addDerivedValue('value', ({position}) => () => ({
     opacity: position.value * 0.1,
   })),
+  addDerivedValue('value', ({position}) => () => {
+    return {
+      opacity: position.value * 0.1,
+    }
+  }),
   () => null
 )
 
@@ -44,6 +61,46 @@ const Component = flowMax(
       opacity: position.value * 0.1,
     }
   }),
+  addDerivedValue('value', ({position}) => () => {
+    'worklet'
+
+    return {
+      opacity: position.value * 0.1,
+    }
+  }),
+  () => null,
+)
+
+
+`;
+
+exports[`unknown plugin 3. unknown plugin: 3. unknown plugin 1`] = `
+
+const Component = flowMax(
+  addDerivedValues(({position}) => ({
+    value: () => position.value * 0.1,
+    otherValue: () => {
+      return position.value * 0.2
+    }
+  })),
+  () => null
+)
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const Component = flowMax(
+  addDerivedValues(({position}) => ({
+    value: () => {
+      'worklet'
+
+      return position.value * 0.1
+    },
+    otherValue: () => {
+      'worklet'
+
+      return position.value * 0.2
+    },
+  })),
   () => null,
 )
 
