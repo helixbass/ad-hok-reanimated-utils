@@ -66,5 +66,33 @@ pluginTester({
         () => null
       )
     `,
+    // addAnimatedGestureHandler()
+    `
+      flowMax(
+        addAnimatedGestureHandler(
+          {
+            onStart: ({translationX, translationY}) => (_, context) => {
+              context.offsetX = translationX.value
+              context.offsetY = translationY.value
+            },
+            onActive: ({
+              translationX,
+              translationY,
+              _clampXResolved: clampXResolved,
+              _clampYResolved: clampYResolved,
+            }) => (event, context) => {
+              const xUnclamped = context.offsetX + event.translationX
+              const yUnclamped = context.offsetY + event.translationY
+              translationX.value = clampXResolved
+                ? clamp(xUnclamped, clampXResolved[0], clampXResolved[1])
+                : xUnclamped
+              translationY.value = clampYResolved
+                ? clamp(yUnclamped, clampYResolved[0], clampYResolved[1])
+                : yUnclamped
+            },
+          },
+        ),
+      )
+    `,
   ],
 })
