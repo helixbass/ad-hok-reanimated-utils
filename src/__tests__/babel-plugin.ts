@@ -55,5 +55,16 @@ pluginTester({
         () => null
       )
     `,
+    // addAnimatedCallback()
+    `
+      const Component = flowMax(
+        addAnimatedCallback(({position, setValue}) => () => {
+          if (position.value > 0.5) {
+            setValue(true)
+          }
+        }),
+        () => null
+      )
+    `,
   ],
 })

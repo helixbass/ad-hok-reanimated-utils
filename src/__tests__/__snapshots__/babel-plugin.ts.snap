@@ -131,3 +131,30 @@ const Component = flowMax(
 
 
 `;
+
+exports[`unknown plugin 5. unknown plugin: 5. unknown plugin 1`] = `
+
+const Component = flowMax(
+  addAnimatedCallback(({position, setValue}) => () => {
+    if (position.value > 0.5) {
+      setValue(true)
+    }
+  }),
+  () => null
+)
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const Component = flowMax(
+  addAnimatedCallback(({position, setValue}) => () => {
+    'worklet'
+
+    if (position.value > 0.5) {
+      setValue(true)
+    }
+  }),
+  () => null,
+)
+
+
+`;
