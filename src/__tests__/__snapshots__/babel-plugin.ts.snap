@@ -106,3 +106,28 @@ const Component = flowMax(
 
 
 `;
+
+exports[`unknown plugin 4. unknown plugin: 4. unknown plugin 1`] = `
+
+const Component = flowMax(
+  addAnimatedProps('pathAnimatedProps', ({center}) => () => ({
+    d: \`M \${center.x} \${center.y}\`,
+  })),
+  () => null
+)
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const Component = flowMax(
+  addAnimatedProps('pathAnimatedProps', ({center}) => () => {
+    'worklet'
+
+    return {
+      d: \`M \${center.x} \${center.y}\`,
+    }
+  }),
+  () => null,
+)
+
+
+`;

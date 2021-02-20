@@ -46,5 +46,14 @@ pluginTester({
         () => null
       )
     `,
+    // addAnimatedProps()
+    `
+      const Component = flowMax(
+        addAnimatedProps('pathAnimatedProps', ({center}) => () => ({
+          d: \`M \${center.x} \${center.y}\`,
+        })),
+        () => null
+      )
+    `,
   ],
 })
