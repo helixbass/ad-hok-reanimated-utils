@@ -24,3 +24,28 @@ const Component = flowMax(
 
 
 `;
+
+exports[`unknown plugin 2. unknown plugin: 2. unknown plugin 1`] = `
+
+const Component = flowMax(
+  addDerivedValue('value', ({position}) => () => ({
+    opacity: position.value * 0.1,
+  })),
+  () => null
+)
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const Component = flowMax(
+  addDerivedValue('value', ({position}) => () => {
+    'worklet'
+
+    return {
+      opacity: position.value * 0.1,
+    }
+  }),
+  () => null,
+)
+
+
+`;
