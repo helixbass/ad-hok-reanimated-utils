@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`unknown plugin 1. unknown plugin: 1. unknown plugin 1`] = `
+
+const Component = flowMax(
+  addAnimatedStyle('style', ({opacity}) => () => ({
+    opacity,
+  })),
+  () => null
+)
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const Component = flowMax(
+  addAnimatedStyle('style', ({opacity}) => () => {
+    'worklet'
+
+    return {
+      opacity,
+    }
+  }),
+  () => null,
+)
+
+
+`;
