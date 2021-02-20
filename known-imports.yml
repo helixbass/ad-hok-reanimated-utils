@@ -1,0 +1,493 @@
+imports:
+  flow: lodash/fp
+  indexOf: lodash/fp
+  slice: lodash/fp
+  assign: lodash/fp
+  assignAll: lodash/fp
+  filter: lodash/fp
+  reject: lodash/fp
+  forEach: lodash/fp
+  each: lodash/fp
+  fromPairs: lodash/fp
+  get: lodash/fp
+  # set: lodash/fp
+  getOr: lodash/fp
+  groupBy: lodash/fp
+  repeat: lodash/fp
+  countBy: lodash/fp
+  pick: lodash/fp
+  pickBy: lodash/fp
+  keys: lodash/fp
+  map: lodash/fp
+  flatMap: lodash/fp
+  sample: lodash/fp
+  sortBy: lodash/fp
+  split: lodash/fp
+  mapValues: lodash/fp
+  mapKeys: lodash/fp
+  flatten: lodash/fp
+  uniqBy: lodash/fp
+  uniq: lodash
+  take: lodash/fp
+  find: lodash/fp
+  some: lodash/fp
+  join: lodash/fp
+  min: lodash/fp
+  max: lodash/fp
+  sum: lodash
+  negate: lodash/fp
+  trimCharsStart: lodash/fp
+  last: lodash/fp
+  first: lodash/fp
+  values: lodash/fp
+  upperFirst: lodash/fp
+  omit: lodash/fp
+  omitBy: lodash/fp
+  findIndex: lodash/fp
+  without: lodash/fp
+  isEmpty: lodash/fp
+  isPlainObject: lodash/fp
+  isString: lodash/fp
+  isFunction: lodash
+  isArray: lodash/fp
+  isDate: lodash/fp
+  isNumber: lodash/fp
+  identity: lodash/fp
+  delay: lodash/fp
+  defer: lodash/fp
+  ceil: lodash/fp
+  random: lodash/fp
+  debounce: lodash/fp
+  throttle: lodash/fp
+  camelCase: lodash/fp
+  isUndefined: lodash/fp
+  pluck: lodash/fp
+  chunk: lodash/fp
+  isEqual: lodash/fp
+  drop: lodash/fp
+  toUpper: lodash/fp
+  replace: lodash/fp
+  isNaN: lodash/fp
+  has: lodash/fp
+  includes: lodash/fp
+  reduce: lodash/fp
+  truncate: lodash/fp
+  lowerCase: lodash/fp
+  snakeCase: lodash/fp
+  startCase: lodash/fp
+  range: lodash
+  round: lodash
+  fill: lodash
+  zipObject: lodash
+  numeral:
+    module: numeral
+    default: true
+  React:
+    module: react
+    default: true
+  Fragment: react
+  Suspense: react
+  useEffect: react
+  useLayoutEffect: react
+  useState: react
+  useReducer: react
+  useRef: react
+  forwardRef: react
+  createFactory: react
+  createContext: react
+  Children: react
+  cloneElement: react
+  isValidElement: react
+  FC: react
+  ReactNode: react
+  ComponentProps: react
+  ComponentType: react
+  ComponentClass: react
+  ElementType: react
+  MutableRefObject: react
+  Context: react
+  ReactElement: react
+  Ref: react
+  ChangeEvent: react
+  PropTypes:
+    module: prop-types
+    default: true
+  addState: ad-hok
+  addStateHandlers: ad-hok
+  addProps: ad-hok
+  addRef: ad-hok
+  addHandlers: ad-hok
+  addEffect: ad-hok
+  addPropTypes: ad-hok
+  addContext: ad-hok
+  flowMax: ad-hok
+  branch: ad-hok
+  branchPure: ad-hok
+  renderNothing: ad-hok
+  returns: ad-hok
+  addWrapper: ad-hok
+  addWrapperHOC: ad-hok
+  addDisplayName: ad-hok
+  SimplePropsAdder: ad-hok
+  CurriedPropsAdder: ad-hok
+  SimpleUnchangedProps: ad-hok
+  CurriedUnchangedProps: ad-hok
+  HandlerCreators: ad-hok
+  PropAddingHOCType: ad-hok
+  AddWrapperRenderCallback: ad-hok
+  addMemoBoundary: ad-hok
+  addDefaultProps: ad-hok
+  ValueOrFunctionOfProps: ad-hok
+  moment:
+    module: moment
+    default: true
+  gql:
+    module: graphql-tag
+    default: true
+  ApolloQuery:
+    module: react-apollo
+    name: Query
+  ApolloMutation:
+    module: react-apollo
+    name: Mutation
+  ApolloConsumer: react-apollo
+  MockedApolloProvider:
+    module: '@apollo/react-testing'
+    name: MockedProvider
+  ApolloLink: apollo-link
+  InMemoryCache: apollo-cache-inmemory
+  ApolloClient:
+    module: apollo-boost
+    default: true
+  ApolloError: apollo-boost
+  ApolloQueryResult: apollo-boost
+  PureQueryOptions: apollo-boost
+  ApolloProvider: '@apollo/react-hooks'
+  useQuery: '@apollo/react-hooks'
+  useMutation: '@apollo/react-hooks'
+  MutationFunction: '@apollo/react-common'
+  i18n:
+    module: i18next
+    default: true
+  TFunction: i18next
+  initReactI18next: react-i18next
+  useTranslation: react-i18next
+  cx:
+    module: classnames
+    default: true
+  DateFnsUtils:
+    module: '@date-io/date-fns'
+    default: true
+  formatISO:
+    module: 'date-fns/formatISO'
+    default: true
+  formatDate:
+    module: 'date-fns/fp'
+    name: format
+  parseDate:
+    module: 'date-fns/fp'
+    name: parse
+  parseISO:
+    module: 'date-fns/parseISO'
+    default: true
+  differenceInYears:
+    module: 'date-fns/differenceInYears'
+    default: true
+  formatDistance:
+    module: 'date-fns/formatDistance'
+    default: true
+  formatDistanceToNow:
+    module: 'date-fns/formatDistanceToNow'
+    default: true
+  intervalToDuration:
+    module: 'date-fns/intervalToDuration'
+    default: true
+  Duration: 'date-fns'
+  minDate:
+    module: 'date-fns/min'
+    default: true
+  getYear:
+    module: 'date-fns/getYear'
+    default: true
+  subMonths: 'date-fns/fp'
+  subYears:
+    module: 'date-fns/subYears'
+    default: true
+  addMonths: 'date-fns/fp'
+  addMinutes: 'date-fns/fp'
+  addSeconds: 'date-fns/fp'
+  setMinutes: 'date-fns/fp'
+  setHours: 'date-fns/fp'
+  setSeconds: 'date-fns/fp'
+  getMinutes: 'date-fns/fp'
+  getHours: 'date-fns/fp'
+  getSeconds: 'date-fns/fp'
+  getDay: 'date-fns/fp'
+  startOfWeek:
+    module: 'date-fns/startOfWeek'
+    default: true
+  startOfMonth:
+    module: 'date-fns/startOfMonth'
+    default: true
+  endOfWeek:
+    module: 'date-fns/endOfWeek'
+    default: true
+  endOfMonth:
+    module: 'date-fns/endOfMonth'
+    default: true
+  eachDayOfInterval:
+    module: 'date-fns/eachDayOfInterval'
+    default: true
+  isThisMonth:
+    module: 'date-fns/isThisMonth'
+    default: true
+  isToday:
+    module: 'date-fns/isToday'
+    default: true
+  isDateBefore:
+    module: 'date-fns/isBefore'
+    default: true
+  isDateAfter:
+    module: 'date-fns/isAfter'
+    default: true
+  setDayOfMonth:
+    module: 'date-fns/setDate'
+    default: true
+  differenceInSeconds:
+    module: 'date-fns/differenceInSeconds'
+    default: true
+  differenceInMonths:
+    module: 'date-fns/differenceInMonths'
+    default: true
+  differenceInCalendarDays:
+    module: 'date-fns/differenceInCalendarDays'
+    default: true
+  getDaysInMonth:
+    module: 'date-fns/getDaysInMonth'
+    default: true
+  subDays: 'date-fns/fp'
+  addDays: 'date-fns/fp'
+  eachMonthOfInterval:
+    module: 'date-fns/eachMonthOfInterval'
+    default: true
+  isValidDate:
+    module: 'date-fns/isValid'
+    default: true
+  isSameDay:
+    module: 'date-fns/isSameDay'
+    default: true
+  isSameMonth:
+    module: 'date-fns/isSameMonth'
+    default: true
+  zonedTimeToUtc: date-fns-tz
+  utcToZonedTime: date-fns-tz
+  raw:
+    module: 'raw.macro'
+    default: true
+  buildSchema: graphql
+  DocumentNode: graphql
+  DefinitionNode: graphql
+  GraphQLScalarType: graphql
+  GraphQLObjectType: graphql
+  GraphQLNonNull: graphql
+  GraphQLList: graphql
+  GraphQLUnionType: graphql
+  GraphQLEnumType: graphql
+  addPropTrackingRef: ad-hok-utils
+  addPropIdentityStabilization: ad-hok-utils
+  branchIfNullish: ad-hok-utils
+  branchIfFalsy: ad-hok-utils
+  branchIfFailsPredicate: ad-hok-utils
+  branchIfEmpty: ad-hok-utils
+  addComponentBoundary: ad-hok-utils
+  addDebouncedCopy: ad-hok-utils
+  addEffectOnMount: ad-hok-utils
+  addLayoutEffectOnMount: ad-hok-utils
+  addEffectOnUnmount: ad-hok-utils
+  addExtendedHandlers: ad-hok-utils
+  # addInterval: ad-hok-utils
+  removeProps: ad-hok-utils
+  cleanupProps: ad-hok-utils
+  declarePropTypesNarrowing: ad-hok-utils
+  addContextProvider: ad-hok-utils
+  getContextHelpers: ad-hok-utils
+  getContextHelpersFromInitialValues: ad-hok-utils
+  toObjectKeys: ad-hok-utils
+  addNamedComponentBoundary: ad-hok-utils
+  List: ts-toolbelt
+  saveFileAs:
+    module: file-saver
+    name: saveAs
+  uuid:
+    module: uuid
+    name: v4
+  Linking: react-native
+  StyleSheet: react-native
+  SafeAreaView: react-native
+  TouchableOpacity: react-native
+  TouchableWithoutFeedback: react-native
+  Dimensions: react-native
+  Share: react-native
+  StatusBar: react-native
+  KeyboardAvoidingView: react-native
+  Keyboard: react-native
+  findNodeHandle: react-native
+  ImageBackground: react-native
+  Alert: react-native
+  AppState: react-native
+  StyleProp: react-native
+  TextStyle: react-native
+  ViewStyle: react-native
+  ImageStyle: react-native
+  ImageSourcePropType: react-native
+  Switch: react-native
+  NativeModules: react-native
+  NativeModule: react-native
+  NativeEventEmitter: react-native
+  MeasureOnSuccessCallback: react-native
+  Modal:
+    module: react-native-modal
+    default: true
+  RecoilRoot: recoil
+  useRecoilState: recoil
+  useRecoilValue: recoil
+  atom: recoil
+  selector: recoil
+  RecoilState: recoil
+  RecoilValue: recoil
+  useSetRecoilState: recoil
+  useResetRecoilState: recoil
+  SetterOrUpdater: recoil
+  RNCamera: react-native-camera
+  Svg:
+    module: react-native-svg
+    default: true
+  G: react-native-svg
+  Path: react-native-svg
+  Rect: react-native-svg
+  Circle: react-native-svg
+  Ellipse: react-native-svg
+  Defs: react-native-svg
+  SvgLinearGradient:
+    module: react-native-svg
+    name: LinearGradient
+  Stop: react-native-svg
+  SvgText:
+    module: react-native-svg
+    name: Text
+  Line: react-native-svg
+  Polygon: react-native-svg
+  ClipPath: react-native-svg
+  SvgImage:
+    module: react-native-svg
+    name: Image
+  Mask: react-native-svg
+  Animated:
+    module: react-native-reanimated
+    default: true
+  interpolate: react-native-reanimated
+  interpolateNode: react-native-reanimated
+  Easing: react-native-reanimated
+  EasingNode: react-native-reanimated
+  Clock: react-native-reanimated
+  cond: react-native-reanimated
+  block: react-native-reanimated
+  and: react-native-reanimated
+  clockRunning: react-native-reanimated
+  not: react-native-reanimated
+  or: react-native-reanimated
+  startClock: react-native-reanimated
+  stopClock: react-native-reanimated
+  Value: react-native-reanimated
+  Extrapolate: react-native-reanimated
+  timing: react-native-reanimated
+  set: react-native-reanimated
+  eq: react-native-reanimated
+  neq: react-native-reanimated
+  multiply: react-native-reanimated
+  sub: react-native-reanimated
+  add: react-native-reanimated
+  call: react-native-reanimated
+  Transitioning: react-native-reanimated
+  Transition: react-native-reanimated
+  debug: react-native-reanimated
+  greaterThan: react-native-reanimated
+  greaterOrEq: react-native-reanimated
+  lessThan: react-native-reanimated
+  lessOrEq: react-native-reanimated
+  modulo: react-native-reanimated
+  concat: react-native-reanimated
+  divide: react-native-reanimated
+  floor: react-native-reanimated
+  event: react-native-reanimated
+  diffClamp: react-native-reanimated
+  useAnimatedStyle: react-native-reanimated
+  # withTiming: react-native-reanimated
+  useSharedValue: react-native-reanimated
+  useDerivedValue: react-native-reanimated
+  useAnimatedProps: react-native-reanimated
+  useAnimatedGestureHandler: react-native-reanimated
+  runOnJS: react-native-reanimated
+  withRepeat: react-native-reanimated
+  polar2Canvas: react-native-redash
+  canvas2Polar: react-native-redash
+  parsePath:
+    module: react-native-redash
+    name: parse
+  interpolatePath: react-native-redash
+  Vector: react-native-redash
+  PolarPoint: react-native-redash
+  ReText: react-native-redash
+  clamp: react-native-redash
+  LinearGradient:
+    module: react-native-linear-gradient
+    default: true
+  Video:
+    module: react-native-video
+    default: true
+  svgPathProperties:
+    module: svg-path-properties
+    namespace: true
+  Tabs:
+    module: react-native-material-tabs
+    default: true
+  FullScreen:
+    module: react-native-full-screen
+    default: true
+  PanGestureHandler: react-native-gesture-handler
+  PanGestureHandlerGestureEvent: react-native-gesture-handler
+  GestureHandlerGestureEvent: react-native-gesture-handler
+  GestureState:
+    module: react-native-gesture-handler
+    name: State
+  NavigationContainer: "@react-navigation/native"
+  RouteProp: "@react-navigation/native"
+  useNavigation: "@react-navigation/native"
+  CompositeNavigationProp: "@react-navigation/native"
+  NavigatorScreenParams: "@react-navigation/native"
+  NavigationRoute: "@react-navigation/native"
+  createStackNavigator: "@react-navigation/stack"
+  StackNavigationProp: "@react-navigation/stack"
+  StackScreenProps: "@react-navigation/stack"
+  createBottomTabNavigator: "@react-navigation/bottom-tabs"
+  BottomTabNavigationProp: "@react-navigation/bottom-tabs"
+  BottomTabBarProps: "@react-navigation/bottom-tabs"
+  BottomTabBarOptions: "@react-navigation/bottom-tabs"
+  # BottomTabNavigationEventMap: "@react-navigation/bottom-tabs"
+  BottomTabNavigationOptions: "@react-navigation/bottom-tabs"
+  # BottomTabDescriptorMap: "@react-navigation/bottom-tabs"
+  NavigationState: "@react-navigation/routers"
+  TabNavigationState: "@react-navigation/routers"
+  ParamListBase: "@react-navigation/routers"
+  NavigationHelpers: "@react-navigation/core"
+  Descriptor: "@react-navigation/core"
+  enableScreens: react-native-screens
+  ExtraDimensions:
+    module: react-native-extra-dimensions-android
+    default: true
+# whitelist:
+#   - directory: config/
+#     allowed: [filename, named]
+#     prefix: 'config/'
+# blacklist:
+#   - styles

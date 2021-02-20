@@ -1,0 +1,1 @@
+export {addAnimatedStyle} from './addAnimatedStyle'
