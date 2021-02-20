@@ -1,1 +1,7 @@
 export {addAnimatedStyle} from './addAnimatedStyle'
+export {addSharedValues} from './addSharedValues'
+export {addDerivedValues} from './addDerivedValues'
+export {addAnimatedProps} from './addAnimatedProps'
+export {addAnimatedGestureHandler} from './addAnimatedGestureHandler'
+export {addAnimatedCallback} from './addAnimatedCallback'
+export {addSharedValueTrackingProp} from './addSharedValueTrackingProp'
