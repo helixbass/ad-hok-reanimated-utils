@@ -39,6 +39,7 @@ export const addPanGestureHandling: AddPanGestureHandling = ({
     addAnimatedGestureHandler(
       {
         onStart: ({translationX, translationY}) => (_, context) => {
+          'worklet'
           context.offsetX = translationX.value
           context.offsetY = translationY.value
         },
@@ -48,6 +49,7 @@ export const addPanGestureHandling: AddPanGestureHandling = ({
           _clampXResolved: clampXResolved,
           _clampYResolved: clampYResolved,
         }) => (event, context) => {
+          'worklet'
           const xUnclamped = context.offsetX + event.translationX
           const yUnclamped = context.offsetY + event.translationY
           translationX.value = clampXResolved
