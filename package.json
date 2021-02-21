@@ -1,0 +1,70 @@
+{
+  "name": "ad-hok-reanimated-utils",
+  "version": "0.0.1-dev.4",
+  "description": "Helpers to use with ad-hok + react-native-reanimated",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/helixbass/ad-hok-reanimated-utils"
+  },
+  "author": "Julian Rosse <@helixbass> <julian@helixbass.net> (http://helixbass.net/)",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@types/jest": "^26.0.20",
+    "@types/react": "^17.0.2",
+    "@types/react-native": "^0.63.50",
+    "@typescript-eslint/eslint-plugin": "^4.15.1",
+    "@typescript-eslint/parser": "^4.15.1",
+    "ad-hok": "^0.1.1",
+    "ad-hok-utils": "^0.0.5",
+    "babel-plugin-tester": "^10.0.0",
+    "eslint": "^7.20.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-known-imports": "github:helixbass/eslint-plugin-known-imports#eslint-plugin-known-imports-v0.1.0-dev.1-gitpkg",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-native": "^0.63.4",
+    "react-native-gesture-handler": "^1.10.1",
+    "react-native-reanimated": "^2.0.0-rc.3",
+    "react-native-svg": "^12.1.0",
+    "ts-jest": "^26.5.1",
+    "typescript": "^4.1.5"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "lint": "eslint 'src/**/*.ts' 'src/**/*.tsx'",
+    "test": "jest --config jestconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint"
+  },
+  "dependencies": {},
+  "files": [
+    "lib/**/*"
+  ],
+  "types": "lib/index.d.ts",
+  "keywords": [
+    "ad-hok",
+    "react",
+    "react-native",
+    "reanimated",
+    "react-native-reanimated"
+  ],
+  "homepage": "https://github.com/helixbass/ad-hok-reanimated-utils",
+  "bugs": {
+    "url": "https://github.com/helixbass/ad-hok-reanimated-utils/issues"
+  },
+  "peerDependencies": {
+    "ad-hok": ">=0.1.1",
+    "ad-hok-utils": ">=0.0.5",
+    "react": ">=16.8.0",
+    "react-native": ">=0.63.3",
+    "react-native-gesture-handler": "*",
+    "react-native-reanimated": ">=2.0.0-rc.3"
+  }
+}
