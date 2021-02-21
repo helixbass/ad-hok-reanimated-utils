@@ -17,6 +17,7 @@
     "@typescript-eslint/eslint-plugin": "^4.15.1",
     "@typescript-eslint/parser": "^4.15.1",
     "ad-hok": "^0.1.1",
+    "ad-hok-utils": "^0.0.5",
     "babel-plugin-tester": "^10.0.0",
     "eslint": "^7.20.0",
     "eslint-config-prettier": "^7.2.0",
@@ -28,7 +29,9 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-native": "^0.63.4",
+    "react-native-gesture-handler": "^1.10.1",
     "react-native-reanimated": "^2.0.0-rc.3",
+    "react-native-svg": "^12.1.0",
     "ts-jest": "^26.5.1",
     "typescript": "^4.1.5"
   },
@@ -48,6 +51,7 @@
   "keywords": [
     "ad-hok",
     "react",
+    "react-native",
     "reanimated",
     "react-native-reanimated"
   ],
@@ -57,8 +61,10 @@
   },
   "peerDependencies": {
     "ad-hok": ">=0.1.1",
+    "ad-hok-utils": ">=0.0.5",
     "react": ">=16.8.0",
     "react-native": ">=0.63.3",
+    "react-native-gesture-handler": "*",
     "react-native-reanimated": ">=2.0.0-rc.3"
   }
 }

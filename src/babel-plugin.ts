@@ -12,8 +12,8 @@ const isAddDerivedValue = ({node}: NodePath<BabelTypes.CallExpression>) =>
   node.callee.type === 'Identifier' && node.callee.name === 'addDerivedValue'
 const isAddDerivedValues = ({node}: NodePath<BabelTypes.CallExpression>) =>
   node.callee.type === 'Identifier' && node.callee.name === 'addDerivedValues'
-const isAddWorkletHandlers = ({node}: NodePath<BabelTypes.CallExpression>) =>
-  node.callee.type === 'Identifier' && node.callee.name === 'addWorkletHandlers'
+// const isAddWorkletHandlers = ({node}: NodePath<BabelTypes.CallExpression>) =>
+//   node.callee.type === 'Identifier' && node.callee.name === 'addWorkletHandlers'
 const isAddAnimatedProps = ({node}: NodePath<BabelTypes.CallExpression>) =>
   node.callee.type === 'Identifier' && node.callee.name === 'addAnimatedProps'
 const isAddAnimatedCallback = ({node}: NodePath<BabelTypes.CallExpression>) =>
@@ -115,7 +115,10 @@ export default ({
           })
         })
       }
-      if (isAddWorkletHandlers(path) || isAddAnimatedGestureHandler(path)) {
+      if (
+        // isAddWorkletHandlers(path) ||
+        isAddAnimatedGestureHandler(path)
+      ) {
         const handlers = args[0]
         if (handlers.type !== 'ObjectExpression') return
         handlers.properties.forEach((handlerProperty, handlerPropertyIndex) => {
