@@ -19,9 +19,12 @@ import {
   addAnimatedGestureHandler,
   SmuggleAddAnimatedGestureHandlerTypes,
   addPanGestureHandling,
+  addSharedValue,
 } from '.'
 
 const AnimatedSvg = Animated.createAnimatedComponent(Svg)
+
+const typedAs = <TValue,>(value: TValue) => value
 
 export const Component: FC = flowMax(
   addSharedValues({
@@ -52,9 +55,7 @@ export const Component: FC = flowMax(
   addProps(({opacityNum}) => ({
     greater: opacityNum + 1,
   })),
-  addSharedValues({
-    translationX: 0,
-  }),
+  addSharedValue('translationX', typedAs<number>(0)),
   addAnimatedGestureHandler(
     {
       onStart: ({translationX}) => (_, context) => {
