@@ -32,6 +32,7 @@ export const addSharedValueTrackingProp: AddSharedValueTrackingProp = (
     addState(trackingPropName, setterName, initialValue),
     addAnimatedCallback(
       ({[propName]: propValue, [setterName]: setter}) => () => {
+        'worklet'
         runOnJS(setter)(propValue.value)
       },
     ),
